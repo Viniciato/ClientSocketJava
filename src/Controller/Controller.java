@@ -22,5 +22,6 @@ public class Controller {
         BufferedWriter buffeWriter = new BufferedWriter(outStreamWriter);
         buffeWriter.write(nameLabel.getText()+"\r\n");
         buffeWriter.flush();
+        System.out.println("Connected on " + socket.getInetAddress());
     }
 }
