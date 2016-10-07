@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="229.0" layoutY="14.0" prefHeight="60.0" prefWidth="143.0" text="Client Chat!" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ipLabel" alignment="CENTER" layoutX="217.0" layoutY="122.0" promptText="IP DO SERVIDOR" />
+      <TextField fx:id="portLabel" alignment="CENTER" layoutX="217.0" layoutY="161.0" promptText="PORTA DO SERVIDOR" />
+      <Button layoutX="217.0" layoutY="237.0" mnemonicParsing="false" onAction="#connectAction" prefHeight="27.0" prefWidth="167.0" text="Conectar" />
+      <TextField fx:id="nameLabel" alignment="CENTER" layoutX="217.0" layoutY="200.0" promptText="SEU NOME" />
+   </children>
+</AnchorPane>
