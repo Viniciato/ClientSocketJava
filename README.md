@@ -19,5 +19,5 @@ Chat com socket em java para defesa de trabalho final da disciplina de sistemas 
 ```
 `Michael Vornes:`
 ```sh
- mvornes@hotmail.com
+ mvornes@outlook.com
 ```
