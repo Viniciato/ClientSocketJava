@@ -6,7 +6,7 @@ Chat com socket em java para defesa de trabalho final da disciplina de sistemas 
 
 ## Tecnologias
 
-- Sistema Desenvolvido com a IntelliJ IDEA
+- IDE utilizada IntelliJ IDEA
 - Utilizado JavaFX
 - Conceito de MVC
 - Sockets em Java
