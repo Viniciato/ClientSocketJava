@@ -1,13 +1,13 @@
 package Controller;
 
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.lang.reflect.Array;
+import java.io.*;
+import java.net.Socket;
 import java.util.ArrayList;
 
 /**
@@ -18,10 +18,13 @@ public class ChatWindowController {
     @FXML private TextArea messagesLabel;
     private BufferedWriter buffWriter;
     private String nome;
+    private Socket socket;
 
-    public void setParams(BufferedWriter buff, String nome){
+    public void setParams(BufferedWriter buff, String nome, Socket socket){
         this.buffWriter = buff;
         this.nome = nome;
+        this.socket = socket;
+        escutar();
     }
 
     @FXML void sendMessage(ActionEvent event) throws IOException{
@@ -32,6 +35,37 @@ public class ChatWindowController {
         messagesLabel.appendText( nome + " -> " + textLabel.getText()+"\r\n");
         buffWriter.flush();
         textLabel.setText("");
+    }
+
+    public void escutar(){
+
+        Task task = new Task() {
+            @Override
+            protected Object call() throws Exception {
+                try {
+                    InputStream in = socket.getInputStream();
+                    InputStreamReader inr = new InputStreamReader(in);
+                    BufferedReader bfr = new BufferedReader(inr);
+                    String msg = "";
+                    while(!"Sair".equalsIgnoreCase(msg)){
+                        if(bfr.ready()){
+                            msg = bfr.readLine();
+                            if(msg.equals("Sair"))
+                                messagesLabel.appendText("Servidor caiu");
+                            else
+                                messagesLabel.appendText(msg + "\r\n");
+                        }
+                    }
+                }catch (Exception e){
+                    System.out.println(e);
+                }
+                return null;
+            }
+        };
+
+        Thread t = new Thread(task);
+        t.setDaemon(true);
+        t.start();
     }
 
     @FXML void finishChat(ActionEvent event) {

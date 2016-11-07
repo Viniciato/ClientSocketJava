@@ -33,7 +33,7 @@ public class Controller {
         Parent home_page_parent = loader.load();
 
         ChatWindowController controller = loader.getController();
-        controller.setParams(buffeWriter, nameLabel.getText());
+        controller.setParams(buffeWriter, nameLabel.getText(), socket);
 
         Scene home_page_scene = new Scene(home_page_parent);
         Stage main_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
