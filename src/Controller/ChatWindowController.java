@@ -7,6 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.net.Socket;
 import java.util.ArrayList;
 
@@ -50,10 +51,14 @@ public class ChatWindowController {
                     while(!"Sair".equalsIgnoreCase(msg)){
                         if(bfr.ready()){
                             msg = bfr.readLine();
+                            msg = msg.replace("[", "");
+                            msg = msg.replace("]", "");
+                            String[] ary = msg.split(",");
+
                             if(msg.equals("Sair"))
                                 messagesLabel.appendText("Servidor caiu");
                             else
-                                messagesLabel.appendText(msg + "\r\n");
+                                messagesLabel.appendText(ary[0]+"\r\n");
                         }
                     }
                 }catch (Exception e){
