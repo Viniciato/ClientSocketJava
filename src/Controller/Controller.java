@@ -39,7 +39,6 @@ public class Controller {
         main_stage.close();
         main_stage.setScene(home_page_scene);
         main_stage.setResizable(false);
-        main_stage.setMaximized(false);
         main_stage.show();
     }
 }
