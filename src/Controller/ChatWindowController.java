@@ -73,5 +73,5 @@ public class ChatWindowController {
         t.setDaemon(true);
         t.start();
     }
-    
+
 }
