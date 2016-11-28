@@ -73,8 +73,5 @@ public class ChatWindowController {
         t.setDaemon(true);
         t.start();
     }
-
-    @FXML void finishChat(ActionEvent event) {
-
-    }
+    
 }
