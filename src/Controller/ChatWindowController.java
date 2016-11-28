@@ -30,6 +30,7 @@ public class ChatWindowController {
 
     @FXML void sendMessage(ActionEvent event) throws IOException{
         ArrayList<String> array = new ArrayList<>();
+        array.add("9999");
         array.add(textLabel.getText());
         array.add(nome);
         buffWriter.write(array.toString()+"\r\n");
