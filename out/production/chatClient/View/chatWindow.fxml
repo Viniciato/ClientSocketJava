@@ -5,25 +5,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChatWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="421.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChatWindowController">
    <children>
-      <TextArea fx:id="messagesLabel" editable="false" layoutX="24.0" layoutY="53.0" prefHeight="200.0" prefWidth="374.0" />
-      <TextField fx:id="textLabel" layoutX="24.0" layoutY="262.0" prefHeight="27.0" prefWidth="284.0" />
-      <Button layoutX="308.0" layoutY="262.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="27.0" prefWidth="91.0" text="Enviar" />
-      <Button layoutX="24.0" layoutY="305.0" mnemonicParsing="false" onAction="#finishChat" prefHeight="27.0" prefWidth="91.0" text="Encerrar" />
-      <MenuBar prefHeight="29.0" prefWidth="421.0">
-        <menus>
-          <Menu mnemonicParsing="false" text="Marcos">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
-            </items>
-          </Menu>
-          <Menu fx:id="menuAdm" disable="true" mnemonicParsing="false" text="Admin">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <TextArea fx:id="messagesLabel" editable="false" layoutX="24.0" layoutY="21.0" prefHeight="200.0" prefWidth="374.0" />
+      <TextField fx:id="textLabel" layoutX="24.0" layoutY="235.0" prefHeight="27.0" prefWidth="265.0" />
+      <Button layoutX="300.0" layoutY="235.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="27.0" prefWidth="91.0" text="Enviar" />
    </children>
 </AnchorPane>

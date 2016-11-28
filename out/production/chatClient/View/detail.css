@@ -1,0 +1,47 @@
+root { 
+    display: block;
+}
+.root {
+/*-fx-background-image: url("background.jpg");*/
+	
+	-fx-background-color: #ddd;
+/*	-fx-background-color: #e9fde3;*/
+}
+
+#mainWindowRoot {
+	/*-fx-background-color: #ddd;*/ /*comentar essa linha e descomentar a de baixo*/
+	-fx-background-color: #2a5058;
+}
+
+.button {
+    -fx-text-fill: Black;
+    -fx-font-family: "Arial Narrow";
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button-save {
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#73d075, #42d045);
+}
+
+.button-delete {
+    -fx-background-color: linear-gradient(#f46f6f, #f02a2a);
+}
+
+.button-edit {
+    -fx-background-color: linear-gradient(#f2ee86, #f4ed3b);
+}
+
+.button-show {
+    -fx-background-color: linear-gradient(#82b4e3, #4697e1);
+}
+
+.button-shortcut {
+    -fx-background-color: linear-gradient(#2a5058, #2a5058);
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(#2A5058,#61a2b1);
+}
+
+

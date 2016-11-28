@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="239.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0" prefWidth="260.0" stylesheets="@detail.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Controller">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="6.0" prefHeight="60.0" prefWidth="143.0" text="Chat Cliente!" textAlignment="CENTER">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <TextField fx:id="ipLabel" alignment="CENTER" layoutX="36.0" layoutY="66.0" promptText="IP DO SERVIDOR" />
-      <TextField fx:id="portLabel" alignment="CENTER" layoutX="36.0" layoutY="105.0" promptText="PORTA DO SERVIDOR" />
-      <TextField fx:id="nameLabel" alignment="CENTER" layoutX="36.0" layoutY="140.0" promptText="SEU NOME" />
-      <Button layoutX="36.0" layoutY="175.0" mnemonicParsing="false" onAction="#connectAction" prefHeight="27.0" prefWidth="167.0" text="Conectar" />
+      <TextField fx:id="ipLabel" alignment="CENTER" layoutX="40.0" layoutY="147.0" promptText="IP DO SERVIDOR" />
+      <TextField fx:id="portLabel" alignment="CENTER" layoutX="40.0" layoutY="186.0" promptText="PORTA DO SERVIDOR" />
+      <TextField fx:id="nameLabel" alignment="CENTER" layoutX="40.0" layoutY="221.0" promptText="SEU NOME" />
+      <Button layoutX="40.0" layoutY="256.0" mnemonicParsing="false" onAction="#connectAction" prefHeight="27.0" prefWidth="167.0" styleClass="button-save" text="Conectar" />
+      <ImageView fitHeight="104.0" fitWidth="200.0" layoutX="25.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
